@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,7 +18,6 @@ body {
 .header {
   background-color: red;
   height: 80px;
-  width: calc(100% - 20px);
   text-align: center;
   line-height: 80px;
   color: white;
@@ -31,31 +31,30 @@ body {
   border-bottom: 1px solid black;
 }
 
-.nav ul li {
-  float: left;
+.nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
   margin: 10px;
   line-height: 30px;
 }
 
-.clearfix {
-  clear: both;
-}
-
 .content {
   float: left;
-  width: calc(70% - 40px);
-  background-color: green;
+  width: 70%;
+  background-color: rgb(11, 183, 11);
   min-height: 500px;
-  padding: 10px 20px 0 20px;
+  padding: 10px 20px;
 }
 
 .article {
   color: white;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .article:first-child {
@@ -65,13 +64,13 @@ body {
 
 .aside {
   float: left;
-  width: calc(30% - 20px);
-  background-color: orange;
+  width: 30%;
+  background-color: rgb(255, 186, 58);
   min-height: 500px;
-  padding: 10px 10px 0 10px;
+  padding: 10px;
 }
 
-.aside input[type=text] {
+.aside input[type="text"] {
   width: 100%;
 }
 
@@ -86,69 +85,68 @@ body {
 /* Large */
 @media (max-width: 992px) {
   .header {
-      font-size: 70%;
+    font-size: 70%;
   }
 
-  .content {        
-      width: calc(70% - 40px);
-      
+  .content {
+    width: 70%;
   }
 
   .aside {
-      font-size: 70%;
-      width: calc(30% - 20px);
+    font-size: 70%;
+    width: 30%;
   }
 }
 
 /* Medium */
 @media (max-width: 768px) {
-  #container {        
-      width: calc(100% - 2px);
+  #container {
+    width: 100%;
   }
 }
 
 /* Small */
 @media (max-width: 576px) {
   .header {
-      font-size: 70%;
+    font-size: 70%;
   }
 
   .header h1 {
-      max-width: 500px;
-      margin: auto;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    max-width: 500px;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .nav {
-      font-size: 90%;
+    font-size: 90%;
   }
 
-  .nav ul li {
-      line-height: normal;
+  .nav li {
+    line-height: normal;
   }
 
-  .content {        
-      width: calc(60% - 40px);
-      font-size: 70%;
+  .content {
+    width: 60%;
+    font-size: 70%;
   }
 
   .aside {
-      width: calc(40% - 20px);
+    width: 40%;
   }
 
   .aside h2 {
-      max-width: 100px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 /* Extra small */
 @media (max-width: 360px) {
   .footer {
-      font-size: 70%;
+    font-size: 70%;
   }
 }
